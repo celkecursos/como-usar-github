@@ -53,3 +53,35 @@ git push <nome_padrao_do_repositorio_remoto> <nome_da_branch>
 git push origin dev-master
 ```
 
+Criar nova branch no PC.
+```
+git checkout -b <nome_da_branch>
+```
+```
+git checkout -b main
+```
+
+Trocar de branch.
+```
+git switch <nome_da_branch>
+```
+```
+git switch main
+```
+
+Mesclar o histórico de commits de uma branch em outra branch.
+```
+git merge <nome_da_branch>
+```
+```
+git merge dev-master
+```
+
+Fazer o push das alterações de uma branch para outra.
+```
+git push <nome_padrao_do_repositorio_remoto> <nome_da_branch>
+```
+```
+git push origin main
+```
+
