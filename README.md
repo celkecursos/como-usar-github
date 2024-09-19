@@ -5,7 +5,7 @@ Baixar os arquivos do repositório do GitHub. O ponto no final do comando "." in
 git clone --branch <nome_da_branch> <ur_do_repositorio_no_github> .
 ```
 ```
-git clone --branch dev-master <ur_do_repositorio_no_github> .
+git clone --branch dev-master https://github.com/celkecursos/como-usar-github.git .
 ```
 
 Definir as configurações do usuário.
