@@ -294,3 +294,8 @@ INSERT INTO `usuarios` (`nome`, `email`) VALUES
 ('Jessica', 'jessica@celke.com.br'),
 ('Gabrielly', 'gabrielly@celke.com.br');
 ```
+
+Abrir o arquivo de conexão com banco de dados e alterar as credenciais.
+```
+nano conexao.php
+```
