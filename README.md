@@ -95,7 +95,7 @@ ssh-keygen -t rsa -b 4096 -C "seu-email@exemplo.com"
 ssh-keygen -t rsa -b 4096 -C "cesar@celke.com.br"
 ```
 
-Senha usada na aula, não utilizar a mesma: 36FKc3#3t75W<br>
+Senha usada na aula, não utilizar a mesma: 36CFc3#3t75W<br>
 
 Local que é criado a chave pública.
 ```
@@ -235,4 +235,62 @@ git clone -b main git@github.com:celkecursos/como-usar-github.git .
 Verificar e baixar as atualizações do projeto no GitHub via SSH.
 ```
 git pull
+```
+
+## Administrar o MySQL no Servidor LAMP
+
+Verificar se o PDO está habilitado.
+```
+php -m | grep pdo
+```
+
+Abrir o prompt do MySQL.
+```
+sudo mysql
+```
+
+Alterar o método de autenticação root.
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'senha_usada_para_instalar_lamp';
+```
+
+Acessar o MySQL no servidor.
+```
+sudo mysql -u root -p
+```
+
+Senha usada na aula, não utilizar a mesma: 36CFc3#3t75W<br>
+
+Listar bancos de dados.
+```
+SHOW DATABASES;
+```
+
+Criar banco de dados.
+```
+CREATE DATABASE nome_do_banco;
+```
+
+Acessar o banco de dados.
+```
+USE nome_do_banco;
+```
+
+Comando SQL para criar tabela no banco de dados.
+```
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(220) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(220) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+Comando SQL para cadastrar registro no banco de dados.
+```
+INSERT INTO `usuarios` (`nome`, `email`) VALUES
+('Cesar', 'cesar@celke.com.br'),
+('Kelly', 'kelly@celke.com.br'),
+('Jessica', 'jessica@celke.com.br'),
+('Gabrielly', 'gabrielly@celke.com.br');
 ```
